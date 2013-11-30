@@ -19,6 +19,6 @@ class RoutingTest extends TestCase {
 
         $this->assertTrue($this->client->getResponse()->isOk());
     }
-    
+
 
 }

@@ -67,8 +67,6 @@ return array(
             'driver'   => 'mongodb',
             'host'     => 'localhost',
             'port'     => 27017,
-            'username' => 'user',
-            'password' => 'password',
             'database' => 'users'
         ),
 		'pgsql' => array(

@@ -1,0 +1,15 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: white;
+  width: 100%;
+  padding-top: 40px; }
+  body section {
+    clear: both; }
+    body section form {
+      width: 50%; }
+      body section form h2.form-signup-heading {
+        color: #333333; }
+      body section form h2.form-signin-heading {
+        color: #333333; }
+      body section form .form-control {
+        margin-bottom: 1em; }

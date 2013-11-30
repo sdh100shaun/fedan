@@ -1,0 +1,30 @@
+$font-stack:Helvetica, sans-serif;
+$primary-color:#ffffff;
+$baseFontColor:#333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  width:100%;
+  padding-top: 40px;
+
+  section{
+    clear: both;
+
+    form {
+      width:50%;
+
+      h2.form-signup-heading{
+        color: $baseFontColor;
+      }
+      h2.form-signin-heading
+      {
+        color: $baseFontColor;
+      }
+      .form-control{
+        margin-bottom:1em;
+
+      }
+    }
+  }
+}
