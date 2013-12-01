@@ -11,5 +11,6 @@ use Jenssegers\Mongodb\Model as Eloquent;
 
 class Feedback extends Eloquent  {
 
+    protected $collection = 'feedback';
 
 }

@@ -6,6 +6,7 @@
 
     <title>fēdan - the feedback system</title>
     {{ HTML::style('packages/bootstrap/css/bootstrap.min.css') }}
+    {{ HTML::style('packages/font-awesome/css/font-awesome.min.css') }}
     {{ HTML::style('css/src/main.css')}}
 </head>
 
@@ -25,8 +26,14 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li>{{ HTML::link('users/register', 'Register') }}</li>
+
+            @if(!Auth::check())
+
             <li>{{ HTML::link('users/login', 'Login') }}</li>
+            @else
+            <li>{{ HTML::link('users/register', 'Register a user') }}</li>
+            <li>{{ HTML::link('users/logout', 'logout') }}</li>
+            @endif
         </ul>
     </div><!-- /.navbar-collapse -->
 </nav>
@@ -37,7 +44,6 @@
     @if(Session::has('message'))
     <p class="alert">{{ Session::get('message') }}</p>
     @endif
-
     {{ $content }}
 </section>
 </body>

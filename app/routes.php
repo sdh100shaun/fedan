@@ -17,3 +17,5 @@ Route::get('/', function()
 });
 
 Route::controller('users', 'UsersController');
+Route::get('feedback/{user}', 'FeedbackController@showForm');
+Route::post('feedback/feedback', 'FeedbackController@postFeedback');

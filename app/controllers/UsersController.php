@@ -16,6 +16,10 @@ class UsersController extends \BaseController{
 
     public function __construct() {
         $this->beforeFilter('csrf', array('on'=>'post'));
+
+
+        $this->beforeFilter('auth', array('only'=>array('getDashboard')));
+
     }
 
     public function getLogin()
@@ -61,7 +65,13 @@ class UsersController extends \BaseController{
 
     public function getDashboard(){
 
-        $this->layout->content = View::make('users.dashboard');
+        $feedback = Feedback::all();
+        $this->layout->content = View::make('users.dashboard',array('feedback' => $feedback) );
     }
 
+    public function getLogout()
+    {
+        Auth::logout();
+        return Redirect::to('users/login')->with('message', 'Your are now logged out');
+    }
 } 
