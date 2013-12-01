@@ -13,4 +13,11 @@ class Feedback extends Eloquent  {
 
     protected $collection = 'feedback';
 
+    public static $rules = array(
+        'happened'=>'required|alpha|min:2',
+        'doing'=>'required|alpha|min:2',
+        'rating'=>'digitsbetween:0,7',
+        'page'=>"required",
+        'user'=>"required"
+    );
 }

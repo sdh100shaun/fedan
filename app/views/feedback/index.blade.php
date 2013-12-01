@@ -20,10 +20,10 @@
         <div class="form-group"><label>What were you trying to do?</label><textarea name="doing" class="form-control required"></textarea></div>
         <div class="form-group"><label>What happened?</label><textarea name="happened" class="form-control required"></textarea></div>
         <div class="form-group"><button type="submit" class="btn btn-default pull-left">Submit</button></div>
-        <input type="hidden" value="" name="page" />
+        <input type="hidden" value="{{$page}}" name="page" />
         <input type="hidden" value="{{$user}}" name="user" />
         <div class="form-group"><label>What is your overall impression ? (optional)</label>
-            <input type="range" min="0" max="7" value="0" step="0.5" id="rating" name="rating">
+            <input type="range" min="0" max="7" value="0" step="1" id="rating" name="rating">
             <div class="rateit" data-rateit-backingfld="#rating"></div></div>
     {{Form::close()}}
 

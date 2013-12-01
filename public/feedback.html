@@ -14,10 +14,14 @@
     <link href="../../css/feedback.css" rel="stylesheet" media="screen" type="text/css" />
     <script>
         $(document).ready(function () {
+            var url = (window.location != window.parent.location) ? document.referrer: document.location;
             //set up some minimal options for the feedback_me plugin
             fm_options = {
-                iframe_url : "http://feedback.local/feedback/test",
-                title_label:"fēdan - the feedback system"
+                iframe_url : "http://feedback.local/feedback/test?url="+escape(url),
+                title_label:"fēdan - the feedback system",
+                custom_params: {
+                    url: url
+                }
             };
 
             //init feedback_me plugin

@@ -18,13 +18,16 @@ class UsersController extends \BaseController{
         $this->beforeFilter('csrf', array('on'=>'post'));
 
 
-        $this->beforeFilter('auth', array('only'=>array('getDashboard')));
+        $this->beforeFilter('auth', array('only'=>array('getDashboard',"getRegister")));
 
     }
 
+    public function getIndex()
+    {
+        return Redirect::to('users/login')->with('message', 'Please login!');
+    }
     public function getLogin()
     {
-
 
         $this->layout->content = View::make('users.login');
     }
