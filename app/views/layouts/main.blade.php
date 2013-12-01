@@ -31,7 +31,9 @@
 
             <li>{{ HTML::link('users/login', 'Login') }}</li>
             @else
+            <li>{{ HTML::link('users/dashboard', 'feedback') }}</li>
             <li>{{ HTML::link('users/register', 'Register a user') }}</li>
+
             <li>{{ HTML::link('users/logout', 'logout') }}</li>
             @endif
         </ul>

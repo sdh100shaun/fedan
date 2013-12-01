@@ -21,5 +21,7 @@ Route::controller('users', 'UsersController');
  * Feedback routes
  */
 Route::get('feedback/errors', 'FeedbackController@getErrors');
+Route::get('feedback/thanks', 'FeedbackController@getThanks');
+Route::get('feedback/showForm', 'FeedbackController@showForm');
 Route::get('feedback/{user}', 'FeedbackController@showForm');
 Route::post('feedback/feedback', 'FeedbackController@postFeedback');

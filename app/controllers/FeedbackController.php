@@ -7,13 +7,17 @@
  */
 
 
-
-class FeedbackController extends BaseController {
+class FeedbackController extends BaseController
+{
 
     public function __construct()
     {
-        $this->beforeFilter('csrf', array('on'=>'post'));
+
+
+        $this->beforeFilter('csrf', array('on' => 'post'));
     }
+
+
     public function postFeedback()
     {
 
@@ -28,26 +32,38 @@ class FeedbackController extends BaseController {
             $feedback->page = Input::get('page');
             $feedback->save();
 
-            Redirect::to('feedback/showForm')->with('message', 'Feedback submitted!');
+            $user = filter_var(Input::get('user'),FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $message = $user. ' your feedback has been submitted!';
 
+            return Redirect::to('feedback/thanks')->with('message',$user);
+
+        } else {
+
+            return Redirect::to('feedback/errors')->with('message', 'The following errors occurred')->withErrors($validator)->withInput();
         }
-     else {
-
-         Redirect::to('feedback/errors')->with('message', 'The following errors occurred')->withErrors($validator)->withInput();
-     }
 
     }
 
     public function getErrors()
     {
 
-        return View::make('feedback.errors');
+        return View::make('feedback.errors',array("user"=>Input::old('user')));
 
     }
+
+    public function getThanks()
+    {
+
+        return View::make('feedback.thanks');
+
+    }
+
     public function showForm($user)
     {
         $currentDateTime = new DateTime();
 
-        return View::make('feedback.index',array("user"=>$user,"today"=>$currentDateTime->getTimestamp(),"page"=>Input::get('url')));
+        return View::make('feedback.index', array("user" => $user, "today" => $currentDateTime->getTimestamp(), "page" => Input::get('url')));
     }
+
+
 } 

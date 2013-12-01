@@ -25,12 +25,17 @@ body {
       body section form .form-control {
         margin-bottom: 1em; }
     body section table.tablesorter {
+      color: #333333;
       margin-top: 2em; }
       body section table.tablesorter thead {
+        color: #f2f2f2;
         cursor: pointer;
         background: #333333; }
         body section table.tablesorter thead tr th:hover {
           background-color: #6c6c6c; }
+  body h2 {
+    font-family: "Ubuntu", "Open Sans", "Arial", "sans-serif";
+    color: #666; }
 
 #header {
   font-family: "Source Sans Pro";
