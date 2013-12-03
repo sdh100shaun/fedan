@@ -12,7 +12,7 @@
     <h2> Thanks </h2>
     @if(Session::has('message'))
     <p class="alert alert-success"><i class="fa fa-comment-o"></i> {{ Session::get('message') }} your feedback has been submitted </p>
-    <a href="/feedback/{{Session::get('message')}}" >Submit more feedback</a>
+    <a href="/feedback/{{Session::get('message')}}?url={{Session::get('url')}}" >Submit more feedback</a>
     @endif
 </div>
 <?php echo View::make('partials.footer'); ?>

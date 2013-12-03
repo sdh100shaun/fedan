@@ -18,7 +18,7 @@ class UsersController extends \BaseController{
         $this->beforeFilter('csrf', array('on'=>'post'));
 
 
-        $this->beforeFilter('auth', array('only'=>array('getDashboard',"getRegister")));
+        //$this->beforeFilter('auth', array('only'=>array('getDashboard')));
 
     }
 

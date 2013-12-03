@@ -62,11 +62,13 @@ return array(
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
 		),
-
+        //ds053218.mongolab.com:53218
         'mongodb' => array(
             'driver'   => 'mongodb',
-            'host'     => 'localhost',
-            'port'     => 27017,
+            'host'     => 'ds053218.mongolab.com',
+            'port'     => 53218,
+            'user'     =>'sdh100shaun',
+            'password' =>'sdhmongo',
             'database' => 'users'
         ),
 		'pgsql' => array(

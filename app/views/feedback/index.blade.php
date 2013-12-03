@@ -18,6 +18,8 @@
     {{ Form::open(array('url'=>'feedback/feedback','class'=>'form-horizontal col-sm-6','method' => 'post')) }}
 
         <div class="form-group"><label>What were you trying to do?</label><textarea name="doing" class="form-control required"></textarea></div>
+        <div class="form-group"><input type="checkbox" value="yes" name="work" id="work"/>
+        <label for="work">Did it work as expected Yes/No?</label></div>
         <div class="form-group"><label>What happened?</label><textarea name="happened" class="form-control required"></textarea></div>
         <div class="form-group"><button type="submit" class="btn btn-default pull-left">Submit</button></div>
         <input type="hidden" value="{{$page}}" name="page" />
@@ -29,7 +31,7 @@
 
     <p>Kindly submitted on {{ date('d M Y  H:i ', $today) }} by {{$user}}</p>
     <p>This system helps us keep track of any issues that have occurred and feed them directly into the next release.</p>
-    <p>If you prefer your feedback is welcome by emailing the Digital Survey team at <a href="mailto:digitalepns@nottingham.ac.uk">digitalepns@nottingham.ac.uk</a></p>
+
 </div>
 <script src="{{ URL::asset('js/jquery.min.js') }}" type="text/javascript" ></script>
 <script src="{{ URL::asset('js/rateit/src/jquery.rateit.min.js') }}" type="text/javascript" ></script>

@@ -15,6 +15,7 @@
     <script>
         $(document).ready(function () {
             var url = (window.location != window.parent.location) ? document.referrer: document.location;
+
             //set up some minimal options for the feedback_me plugin
             fm_options = {
                 iframe_url : "http://feedback.local/feedback/test?url="+escape(url),

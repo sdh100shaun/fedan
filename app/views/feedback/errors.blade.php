@@ -5,7 +5,7 @@
  * Date: 01/12/2013
  * Time: 02:31
  */
-echo View::make('partials.header') ?>
+echo View::make('partials.header'); var_dump($errors);?>
 
     <div class="well">
         <h3><i class="fa fa-warning" ></i> Oops an error occurred.</h3>

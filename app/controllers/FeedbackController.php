@@ -30,12 +30,14 @@ class FeedbackController extends BaseController
             $feedback->rating = Input::get('rating');
             $feedback->user = Input::get('user');
             $feedback->page = Input::get('page');
+            $working = Input::get('work');
+            $feedback->working = empty($working)? "no":$working;
             $feedback->save();
 
             $user = filter_var(Input::get('user'),FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-            $message = $user. ' your feedback has been submitted!';
+            $page=Input::get('page');
 
-            return Redirect::to('feedback/thanks')->with('message',$user);
+            return Redirect::to('feedback/thanks')->with(array('message'=>$user,'url'=>$page));
 
         } else {
 
