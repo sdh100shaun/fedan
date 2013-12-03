@@ -69,7 +69,10 @@ class UsersController extends \BaseController{
     public function getDashboard(){
 
         $feedback = Feedback::all();
-        $this->layout->content = View::make('users.dashboard',array('feedback' => $feedback) );
+        $pagesCount = Feedback::count();
+        $statistics = new Statistics();
+        $ratingAvg = $statistics->showRatings();
+        $this->layout->content = View::make('users.dashboard',array('feedback' => $feedback,"pages"=>$pagesCount,"rating"=>$ratingAvg) );
     }
 
     public function getLogout()

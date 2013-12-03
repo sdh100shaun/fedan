@@ -19,4 +19,6 @@ class Feedback extends Eloquent  {
         'page'=>"required",
         'user'=>"required"
     );
+
+
 }

@@ -7,6 +7,10 @@ $tableHover: #6c6c6c;
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 body {
+  h3{color: $baseFontColor;}
+  p{
+    &.pages{color:$baseFontColor;font-size:1800%;font-family: $headers;}
+  }
   &.demo{
     background: $baseFontColor;
     a {

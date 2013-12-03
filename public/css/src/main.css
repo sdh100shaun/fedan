@@ -6,6 +6,12 @@ body {
   color: white;
   width: 100%;
   padding-top: 40px; }
+  body h3 {
+    color: #333333; }
+  body p.pages {
+    color: #333333;
+    font-size: 1800%;
+    font-family: "Ubuntu", "Open Sans", "Arial", "sans-serif"; }
   body.demo {
     background: #333333; }
     body.demo a {

@@ -20,6 +20,8 @@ Route::controller('users', 'UsersController');
 /**
  * Feedback routes
  */
+Route::get('/', 'UsersController@getLogin');
+Route::get('feedback', 'UsersController@getLogin');
 Route::get('feedback/errors', 'FeedbackController@getErrors');
 Route::get('feedback/thanks', 'FeedbackController@getThanks');
 Route::get('feedback/showForm', 'FeedbackController@showForm');
