@@ -36,7 +36,7 @@ $app = require_once __DIR__.'/../bootstrap/start.php';
 
 /*
 |--------------------------------------------------------------------------
-| Run The Application
+| Run The Application and the magic happens
 |--------------------------------------------------------------------------
 |
 | Once we have the application, we can simply call the run method,
