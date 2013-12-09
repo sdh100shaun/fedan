@@ -19,7 +19,7 @@
 
         <div class="form-group"><label>What were you trying to do?</label><textarea name="doing" class="form-control required"></textarea></div>
         <div class="form-group"><input type="checkbox" value="yes" name="work" id="work"/>
-        <label for="work">Did it work as expected Yes/No?</label></div>
+        <label for="work">tick this box if it did not work as expected?</label></div>
         <div class="form-group"><label>What happened?</label><textarea name="happened" class="form-control required"></textarea></div>
         <div class="form-group"><button type="submit" class="btn btn-default pull-left">Submit</button></div>
         <input type="hidden" value="{{$page}}" name="page" />

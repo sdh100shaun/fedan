@@ -65,11 +65,9 @@ return array(
         //ds053218.mongolab.com:53218
         'mongodb' => array(
             'driver'   => 'mongodb',
-            'host'     => 'ds053218.mongolab.com',
-            'port'     => 53218,
-            'user'     =>'sdh100shaun',
-            'password' =>'sdhmongo',
-            'database' => 'users'
+            'host'     => 'db.local',
+            'port'     => 27017,
+            'database' => 'feedback_users'
         ),
 		'pgsql' => array(
 			'driver'   => 'pgsql',
